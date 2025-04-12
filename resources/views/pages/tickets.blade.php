@@ -2,7 +2,7 @@
 
 use function Laravel\Folio\name;
 
-name('index');
+name('tickets.index');
 ?>
 
 <x-layout.base>

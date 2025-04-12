@@ -2,7 +2,7 @@
 
 use function Laravel\Folio\name;
 
-name('index');
+name('hyva-hackathon.index');
 ?>
 
 <x-layout.base>

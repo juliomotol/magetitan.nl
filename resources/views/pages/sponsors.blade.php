@@ -2,7 +2,7 @@
 
 use function Laravel\Folio\name;
 
-name('index');
+name('sponsors.index');
 ?>
 
 <x-layout.base>

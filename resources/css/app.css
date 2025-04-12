@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -6,6 +6,83 @@
 @source '../**/*.js';
 
 @theme {
+    --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    --color-primary: oklch(0.62 0.1768 42.78); /* #DA5915 */
+    --color-dark-gray: oklch(0.24 0 0); /* #1E1E1E*/
+
+    --text-heading-1-bold: 4.5rem;
+    --text-heading-1-bold--line-height: 6rem;
+    --text-heading-1-bold--font-weight: 700;
+    --text-heading-2-bold: 4rem;
+    --text-heading-2-bold--line-height: 5.5rem;
+    --text-heading-2-bold--font-weight: 700;
+    --text-heading-3-bold: 3rem;
+    --text-heading-3-bold--line-height: 4rem;
+    --text-heading-3-bold--font-weight: 700;
+    --text-heading-4-bold: 2rem;
+    --text-heading-4-bold--line-height: 3rem;
+    --text-heading-4-bold--font-weight: 700;
+    --text-heading-5-bold: 1.5rem;
+    --text-heading-5-bold--line-height: 2rem;
+    --text-heading-5-bold--font-weight: 700;
+    --text-heading-6-bold: 1rem;
+    --text-heading-6-bold--line-height: 1.5rem;
+    --text-heading-6-bold--font-weight: 700;
+
+    --text-heading-1-semi-bold: 4.5rem;
+    --text-heading-1-semi-bold--line-height: 6rem;
+    --text-heading-1-semi-bold--font-weight: 600;
+    --text-heading-2-semi-bold: 4rem;
+    --text-heading-2-semi-bold--line-height: 5.5rem;
+    --text-heading-2-semi-bold--font-weight: 600;
+    --text-heading-3-semi-bold: 3rem;
+    --text-heading-3-semi-bold--line-height: 4rem;
+    --text-heading-3-semi-bold--font-weight: 600;
+    --text-heading-4-semi-bold: 2rem;
+    --text-heading-4-semi-bold--line-height: 3rem;
+    --text-heading-4-semi-bold--font-weight: 600;
+    --text-heading-5-semi-bold: 1.5rem;
+    --text-heading-5-semi-bold--line-height: 2rem;
+    --text-heading-5-semi-bold--font-weight: 600;
+    --text-heading-6-semi-bold: 1rem;
+    --text-heading-6-semi-bold--line-height: 1.5rem;
+    --text-heading-6-semi-bold--font-weight: 600;
+
+    --text-heading-1: 4.5rem;
+    --text-heading-1--line-height: 6rem;
+    --text-heading-2: 4rem;
+    --text-heading-2--line-height: 5.5rem;
+    --text-heading-3: 3rem;
+    --text-heading-3--line-height: 4rem;
+    --text-heading-4: 2rem;
+    --text-heading-4--line-height: 3rem;
+    --text-heading-5: 1.5rem;
+    --text-heading-5--line-height: 2rem;
+    --text-heading-6: 1rem;
+    --text-heading-6--line-height: 1.5rem;
+
+    --text-heading-1: 4.5rem;
+    --text-heading-1--line-height: 6rem;
+    --text-heading-2: 4rem;
+    --text-heading-2--line-height: 5.5rem;
+    --text-heading-3: 3rem;
+    --text-heading-3--line-height: 4rem;
+    --text-heading-4: 2rem;
+    --text-heading-4--line-height: 3rem;
+    --text-heading-5: 1.5rem;
+    --text-heading-5--line-height: 2rem;
+    --text-heading-6: 1rem;
+    --text-heading-6--line-height: 1.5rem;
+
+    --text-body: 1rem;
+    --text-body--line-height: 2rem;
+    --text-body-sm: 0.875rem;
+    --text-body-sm--line-height: 1.5rem;
+    --text-body-xs: 0.75rem;
+    --text-body-xs--line-height: 1.5rem;
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }

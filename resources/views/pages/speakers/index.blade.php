@@ -1,8 +1,11 @@
 <?php
 
 use function Laravel\Folio\name;
+use App\Models\Speaker;
 
-name('index');
+name('speakers.index');
+
+$speakers = Speaker::all();
 ?>
 
 <x-layout.base>

@@ -1,0 +1,16 @@
+- title: Home
+  route: index
+- title: Speakers
+  route: speakers.index
+- title: Tickets
+  route: tickets.index
+- title: Venue
+  route: venue.index
+- title: Sponsors
+  route: sponsors.index
+- title: Hackathon
+  route: hyva-hackathon.index
+- title: Gallery
+  route: gallery.index
+- title: Agenda
+  route: agenda.index

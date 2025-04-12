@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d4bfe064e850765c32dc3669d51bb80",
+    "content-hash": "94a4aff058f3cffb5e3dd6ed2f9eff14",
     "packages": [
         {
             "name": "brick/math",
@@ -509,6 +509,56 @@
                 }
             ],
             "time": "2025-03-06T22:45:56+00:00"
+        },
+        {
+            "name": "erusev/parsedown",
+            "version": "1.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "cb17b6477dfff935958ba01325f2e8a2bfa6dab3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/cb17b6477dfff935958ba01325f2e8a2bfa6dab3",
+                "reference": "cb17b6477dfff935958ba01325f2e8a2bfa6dab3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/erusev/parsedown/issues",
+                "source": "https://github.com/erusev/parsedown/tree/1.7.x"
+            },
+            "time": "2019-12-30T22:54:17+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -1055,21 +1105,94 @@
             "time": "2025-02-03T10:55:03+00:00"
         },
         {
-            "name": "laravel/framework",
-            "version": "v12.8.1",
+            "name": "laravel/folio",
+            "version": "v1.1.10",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "d1ea3566f6e0cad34834c6d18db0bf995438eb87"
+                "url": "https://github.com/laravel/folio.git",
+                "reference": "593e2b53104008ec019c0079355dcd878a1f5d1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d1ea3566f6e0cad34834c6d18db0bf995438eb87",
-                "reference": "d1ea3566f6e0cad34834c6d18db0bf995438eb87",
+                "url": "https://api.github.com/repos/laravel/folio/zipball/593e2b53104008ec019c0079355dcd878a1f5d1e",
+                "reference": "593e2b53104008ec019c0079355dcd878a1f5d1e",
                 "shasum": ""
             },
             "require": {
-                "brick/math": "^0.11|^0.12",
+                "illuminate/console": "^10.19|^11.0|^12.0",
+                "illuminate/container": "^10.19|^11.0|^12.0",
+                "illuminate/contracts": "^10.19|^11.0|^12.0",
+                "illuminate/filesystem": "^10.19|^11.0|^12.0",
+                "illuminate/pipeline": "^10.19|^11.0|^12.0",
+                "illuminate/routing": "^10.19|^11.0|^12.0",
+                "illuminate/support": "^10.19|^11.0|^12.0",
+                "illuminate/view": "^10.19|^11.0|^12.0",
+                "php": "^8.1",
+                "spatie/once": "^3.1",
+                "symfony/console": "^6.0|^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.6.0|^9.0|^10.0",
+                "pestphp/pest": "^2.5|^3.0",
+                "phpstan/phpstan": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Folio\\FolioServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "Laravel\\Folio\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Page based routing for Laravel.",
+            "homepage": "https://github.com/laravel/folio",
+            "keywords": [
+                "laravel",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/folio/issues",
+                "source": "https://github.com/laravel/folio"
+            },
+            "time": "2025-01-26T19:34:47+00:00"
+        },
+        {
+            "name": "laravel/framework",
+            "version": "v11.44.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "f85216c82cbd38b66d67ebd20ea762cb3751a4b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f85216c82cbd38b66d67ebd20ea762cb3751a4b4",
+                "reference": "f85216c82cbd38b66d67ebd20ea762cb3751a4b4",
+                "shasum": ""
+            },
+            "require": {
+                "brick/math": "^0.9.3|^0.10.2|^0.11|^0.12",
                 "composer-runtime-api": "^2.2",
                 "doctrine/inflector": "^2.0.5",
                 "dragonmantank/cron-expression": "^3.4",
@@ -1084,32 +1207,32 @@
                 "fruitcake/php-cors": "^1.3",
                 "guzzlehttp/guzzle": "^7.8.2",
                 "guzzlehttp/uri-template": "^1.0",
-                "laravel/prompts": "^0.3.0",
+                "laravel/prompts": "^0.1.18|^0.2.0|^0.3.0",
                 "laravel/serializable-closure": "^1.3|^2.0",
                 "league/commonmark": "^2.6",
                 "league/flysystem": "^3.25.1",
                 "league/flysystem-local": "^3.25.1",
                 "league/uri": "^7.5.1",
                 "monolog/monolog": "^3.0",
-                "nesbot/carbon": "^3.8.4",
+                "nesbot/carbon": "^2.72.6|^3.8.4",
                 "nunomaduro/termwind": "^2.0",
                 "php": "^8.2",
                 "psr/container": "^1.1.1|^2.0.1",
                 "psr/log": "^1.0|^2.0|^3.0",
                 "psr/simple-cache": "^1.0|^2.0|^3.0",
                 "ramsey/uuid": "^4.7",
-                "symfony/console": "^7.2.0",
-                "symfony/error-handler": "^7.2.0",
-                "symfony/finder": "^7.2.0",
+                "symfony/console": "^7.0.3",
+                "symfony/error-handler": "^7.0.3",
+                "symfony/finder": "^7.0.3",
                 "symfony/http-foundation": "^7.2.0",
-                "symfony/http-kernel": "^7.2.0",
-                "symfony/mailer": "^7.2.0",
-                "symfony/mime": "^7.2.0",
+                "symfony/http-kernel": "^7.0.3",
+                "symfony/mailer": "^7.0.3",
+                "symfony/mime": "^7.0.3",
                 "symfony/polyfill-php83": "^1.31",
-                "symfony/process": "^7.2.0",
-                "symfony/routing": "^7.2.0",
-                "symfony/uid": "^7.2.0",
-                "symfony/var-dumper": "^7.2.0",
+                "symfony/process": "^7.0.3",
+                "symfony/routing": "^7.0.3",
+                "symfony/uid": "^7.0.3",
+                "symfony/var-dumper": "^7.0.3",
                 "tijsverkoyen/css-to-inline-styles": "^2.2.5",
                 "vlucas/phpdotenv": "^5.6.1",
                 "voku/portable-ascii": "^2.0.2"
@@ -1173,17 +1296,17 @@
                 "league/flysystem-read-only": "^3.25.1",
                 "league/flysystem-sftp-v3": "^3.25.1",
                 "mockery/mockery": "^1.6.10",
-                "orchestra/testbench-core": "^10.0.0",
+                "orchestra/testbench-core": "^9.11.2",
                 "pda/pheanstalk": "^5.0.6",
                 "php-http/discovery": "^1.15",
                 "phpstan/phpstan": "^2.0",
-                "phpunit/phpunit": "^10.5.35|^11.5.3|^12.0.1",
+                "phpunit/phpunit": "^10.5.35|^11.3.6|^12.0.1",
                 "predis/predis": "^2.3",
                 "resend/resend-php": "^0.10.0",
-                "symfony/cache": "^7.2.0",
-                "symfony/http-client": "^7.2.0",
-                "symfony/psr-http-message-bridge": "^7.2.0",
-                "symfony/translation": "^7.2.0"
+                "symfony/cache": "^7.0.3",
+                "symfony/http-client": "^7.0.3",
+                "symfony/psr-http-message-bridge": "^7.0.3",
+                "symfony/translation": "^7.0.3"
             },
             "suggest": {
                 "ably/ably-php": "Required to use the Ably broadcast driver (^1.0).",
@@ -1209,22 +1332,22 @@
                 "mockery/mockery": "Required to use mocking (^1.6).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (^5.0).",
                 "php-http/discovery": "Required to use PSR-7 bridging features (^1.15).",
-                "phpunit/phpunit": "Required to use assertions and run tests (^10.5.35|^11.5.3|^12.0.1).",
+                "phpunit/phpunit": "Required to use assertions and run tests (^10.5.35|^11.3.6|^12.0.1).",
                 "predis/predis": "Required to use the predis connector (^2.3).",
                 "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^6.0|^7.0).",
                 "resend/resend-php": "Required to enable support for the Resend mail transport (^0.10.0).",
-                "symfony/cache": "Required to PSR-6 cache bridge (^7.2).",
-                "symfony/filesystem": "Required to enable support for relative symbolic links (^7.2).",
-                "symfony/http-client": "Required to enable support for the Symfony API mail transports (^7.2).",
-                "symfony/mailgun-mailer": "Required to enable support for the Mailgun mail transport (^7.2).",
-                "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^7.2).",
-                "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^7.2)."
+                "symfony/cache": "Required to PSR-6 cache bridge (^7.0).",
+                "symfony/filesystem": "Required to enable support for relative symbolic links (^7.0).",
+                "symfony/http-client": "Required to enable support for the Symfony API mail transports (^7.0).",
+                "symfony/mailgun-mailer": "Required to enable support for the Mailgun mail transport (^7.0).",
+                "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^7.0).",
+                "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^7.0)."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "12.x-dev"
+                    "dev-master": "11.x-dev"
                 }
             },
             "autoload": {
@@ -1267,7 +1390,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-04-08T19:58:59+00:00"
+            "time": "2025-03-12T14:34:30+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -3285,6 +3408,247 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "roelofjan-elsinga/aloia-cms",
+            "version": "4.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roelofjan-elsinga/aloia-cms.git",
+                "reference": "0e1ae2ee991c1d10fe6d704a8e7b19bc933ee807"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roelofjan-elsinga/aloia-cms/zipball/0e1ae2ee991c1d10fe6d704a8e7b19bc933ee807",
+                "reference": "0e1ae2ee991c1d10fe6d704a8e7b19bc933ee807",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "illuminate/console": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+                "php": "^8.1|^8.2",
+                "roelofjan-elsinga/content-to-html-parser": "^0.5",
+                "roelofjan-elsinga/sitemap-generator": "^0.6",
+                "spatie/yaml-front-matter": "^2.0",
+                "symfony/yaml": "^6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.8",
+                "mikey179/vfsstream": "^1.6",
+                "orchestra/testbench": "^7.4",
+                "pestphp/pest": "^1.22"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Block": "AloiaCms\\Facades\\BlockFacade"
+                    },
+                    "providers": [
+                        "AloiaCms\\AloiaCmsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AloiaCms\\": "src/",
+                    "AloiaCms\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roelof Jan Elsinga",
+                    "email": "roelofjanelsinga@gmail.com"
+                }
+            ],
+            "description": "A drop-in flat file CMS for Laravel.",
+            "keywords": [
+                "cms",
+                "file",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/roelofjan-elsinga/aloia-cms/issues",
+                "source": "https://github.com/roelofjan-elsinga/aloia-cms/tree/4.4.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/roelofjan-elsinga",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/roelofjanelsinga",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2024-11-14T12:28:00+00:00"
+        },
+        {
+            "name": "roelofjan-elsinga/content-to-html-parser",
+            "version": "0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roelofjan-elsinga/content-to-html-parser.git",
+                "reference": "575b479c265f45c7a401c7eb57ca418d12a04923"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roelofjan-elsinga/content-to-html-parser/zipball/575b479c265f45c7a401c7eb57ca418d12a04923",
+                "reference": "575b479c265f45c7a401c7eb57ca418d12a04923",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "^1.7",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ContentParser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roelof Jan Elsinga",
+                    "email": "roelofjanelsinga@gmail.com"
+                }
+            ],
+            "description": "This package converts content from strings or files to HTML strings to be rendered on a page",
+            "support": {
+                "issues": "https://github.com/roelofjan-elsinga/content-to-html-parser/issues",
+                "source": "https://github.com/roelofjan-elsinga/content-to-html-parser/tree/master"
+            },
+            "time": "2020-02-05T14:47:46+00:00"
+        },
+        {
+            "name": "roelofjan-elsinga/sitemap-generator",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roelofjan-elsinga/sitemap-generator.git",
+                "reference": "c6eebe528b3a41c543678a2bdbd6530c1a044a60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roelofjan-elsinga/sitemap-generator/zipball/c6eebe528b3a41c543678a2bdbd6530c1a044a60",
+                "reference": "c6eebe528b3a41c543678a2bdbd6530c1a044a60",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1|^8.2"
+            },
+            "require-dev": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "friendsofphp/php-cs-fixer": "^3.8",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SitemapGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roelof Jan Elsinga",
+                    "email": "roelofjanelsinga@gmail.com"
+                }
+            ],
+            "description": "This package helps you to very easily generate a sitemap for your website",
+            "support": {
+                "issues": "https://github.com/roelofjan-elsinga/sitemap-generator/issues",
+                "source": "https://github.com/roelofjan-elsinga/sitemap-generator/tree/0.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/roelofjan-elsinga",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/roelofjanelsinga",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2024-11-07T13:38:10+00:00"
+        },
+        {
+            "name": "spatie/yaml-front-matter",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/yaml-front-matter.git",
+                "reference": "5d0009289dd19a23e5f6cbb72c959a9fc1881e32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/yaml-front-matter/zipball/5d0009289dd19a23e5f6cbb72c959a9fc1881e32",
+                "reference": "5d0009289dd19a23e5f6cbb72c959a9fc1881e32",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0",
+                "symfony/yaml": "^6.0|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\YamlFrontMatter\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A to the point yaml front matter parser",
+            "homepage": "https://github.com/sebastiandedeyne/yaml-front-matter",
+            "keywords": [
+                "front matter",
+                "jekyll",
+                "spatie",
+                "yaml"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/yaml-front-matter/tree/2.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-12-02T08:40:45+00:00"
         },
         {
             "name": "symfony/clock",
@@ -5513,6 +5877,78 @@
                 }
             ],
             "time": "2025-01-17T11:39:41+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v6.4.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "28ee818fce4a73ac1474346b94e4b966f665c53f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/28ee818fce4a73ac1474346b94e4b966f665c53f",
+                "reference": "28ee818fce4a73ac1474346b94e4b966f665c53f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/polyfill-ctype": "^1.8"
+            },
+            "conflict": {
+                "symfony/console": "<5.4"
+            },
+            "require-dev": {
+                "symfony/console": "^5.4|^6.0|^7.0"
+            },
+            "bin": [
+                "Resources/bin/yaml-lint"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Loads and dumps YAML files",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v6.4.20"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2025-02-27T20:15:30+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -8824,78 +9260,6 @@
             "time": "2024-10-20T05:08:20+00:00"
         },
         {
-            "name": "symfony/yaml",
-            "version": "v7.2.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "4c4b6f4cfcd7e52053f0c8bfad0f7f30fb924912"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/4c4b6f4cfcd7e52053f0c8bfad0f7f30fb924912",
-                "reference": "4c4b6f4cfcd7e52053f0c8bfad0f7f30fb924912",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2",
-                "symfony/deprecation-contracts": "^2.5|^3.0",
-                "symfony/polyfill-ctype": "^1.8"
-            },
-            "conflict": {
-                "symfony/console": "<6.4"
-            },
-            "require-dev": {
-                "symfony/console": "^6.4|^7.0"
-            },
-            "bin": [
-                "Resources/bin/yaml-lint"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Yaml\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Loads and dumps YAML files",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/yaml/tree/v7.2.5"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2025-03-03T07:12:39+00:00"
-        },
-        {
             "name": "ta-tikoma/phpunit-architecture-test",
             "version": "0.8.4",
             "source": {
@@ -9007,12 +9371,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }

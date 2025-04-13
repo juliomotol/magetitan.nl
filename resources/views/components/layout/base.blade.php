@@ -46,9 +46,9 @@
 </head>
 
 <body {{ $attributes->class('min-h-screen') }}>
-    <x-header class="sticky top-0 z-10"/>
+    <x-navbar class="sticky top-0 z-10"/>
 
-    <main class="min-h-screen mt-[-120px]">
+    <main class="mt-[-120px] min-h-screen">
         {{ $slot }}
     </main>
 

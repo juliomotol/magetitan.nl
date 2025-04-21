@@ -11,6 +11,8 @@
         "Noto Color Emoji";
 
     --color-primary: oklch(0.62 0.1768 42.78); /* #DA5915 */
+    --color-primary-lighter: oklch(0.67 0.2162 34.75); /* #FF5226 */
+    --color-primary-darker: oklch(0.54 0.1992 32.99); /* #C82800 */
     --color-dark-gray: oklch(0.24 0 0); /* #1E1E1E*/
 
     --text-heading-1-bold: 4.5rem;
@@ -83,6 +85,32 @@
     --text-body-sm--line-height: 1.5rem;
     --text-body-xs: 0.75rem;
     --text-body-xs--line-height: 1.5rem;
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@utility scrollbar-hidden {
+    $::-webkit-scrollbar {
+        display: none;  /* Safari and Chrome */
+    }
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.bg-overlay {
+    @apply relative;
+}
+
+.bg-overlay:before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full;
+    background-image: url(/resources/images/bg-overlay.png);
+    background-size: 100% auto;
+
+    filter: opacity(50%);
+}
+
+.hexagon{
+  aspect-ratio: cos(30deg);
+  clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+  @apply bg-white;
 }

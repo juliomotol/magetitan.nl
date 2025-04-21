@@ -2,7 +2,7 @@
     {{ $attributes->class(' bg-dark-gray/30 transition-colors') }}
     x-data="{ open: false, atTop: window.pageYOffset < window.innerHeight }"
     @scroll.window="atTop = (window.pageYOffset < window.innerHeight)"
-    :class="{'bg-dark-gray': !atTop, 'bg-dark-gray/30': atTop}"
+    :class="{ 'bg-dark-gray': !atTop, 'bg-dark-gray/30': atTop }"
 >
     <div
         class="min-h-[96px] container mx-auto flex flex-wrap justify-between items-center px-4 pt-6 pb-5 lg:min-h-[120px]">
@@ -18,12 +18,13 @@
         </a>
 
         <div class="flex space-x-3 lg:order-2 lg:space-x-0">
-            <a
+            <x-button
                 href="https://www.eventbrite.com/e/magetitans-groningen-tickets-862029402147"
                 target="_blank"
-                class="bg-primary w-[120px] h-12 flex justify-center items-center text-white"
+                class="w-[120px]"
             >
                 Register
+            </x-button>
             </a>
             <button
                 type="button"

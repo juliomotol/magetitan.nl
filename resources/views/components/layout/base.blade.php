@@ -42,11 +42,26 @@
     >
 
     @vite('resources/css/app.css')
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+
     @stack('styles')
 </head>
 
 <body {{ $attributes->class('min-h-screen') }}>
-    <x-navbar class="sticky top-0 z-10"/>
+    <x-navbar class="sticky top-0 z-10" />
 
     <main class="mt-[-120px] min-h-screen">
         {{ $slot }}

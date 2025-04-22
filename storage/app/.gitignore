@@ -1,6 +1,4 @@
 *
-!collections/
-!data/
 !private/
 !public/
 !.gitignore

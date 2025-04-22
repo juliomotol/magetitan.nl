@@ -5,7 +5,7 @@ return [
     /*
      * This value represents the folder locations where the collections are saved
      * */
-    'collections_path' => storage_path('app/collections'),
+    'collections_path' => resource_path('contents/collections'),
 
     /*
      * The seo key allows you to customize certain SEO specific generator features

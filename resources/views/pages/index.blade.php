@@ -48,8 +48,11 @@ name('index');
                         Chosen Charity
                     </h5>
                     <div class="bg-primary relative mt-40 flex-1 px-8 pb-20 pt-60">
-                        <div class="hexagon absolute -top-32 left-1/2 h-80 -translate-x-1/2 flex items-center justify-center px-8">
-                            <img src="{{ Vite::asset('resources/images/home/harstichting.png') }}" alt="harstichting" class="w-full">
+                        <div
+                            class="hexagon absolute -top-32 left-1/2 flex h-80 -translate-x-1/2 items-center justify-center px-8">
+                            <img src="{{ Vite::asset('resources/images/home/harstichting.png') }}" alt="harstichting"
+                                class="w-full"
+                            >
                         </div>
 
                         <p class="text-body">
@@ -64,8 +67,11 @@ name('index');
                         Chosen Headline sponsor: Mollie
                     </h5>
                     <div class="bg-primary relative mt-40 flex-1 px-8 pb-20 pt-60">
-                        <div class="hexagon absolute -top-32 left-1/2 h-80 -translate-x-1/2 flex items-center justify-center px-8">
-                            <img src="{{ Vite::asset('resources/images/home/mollie.png') }}" alt="mollie" class="w-full">
+                        <div
+                            class="hexagon absolute -top-32 left-1/2 flex h-80 -translate-x-1/2 items-center justify-center px-8">
+                            <img src="{{ Vite::asset('resources/images/home/mollie.png') }}" alt="mollie"
+                                class="w-full"
+                            >
                         </div>
 
                         <p class="text-body">
@@ -80,8 +86,11 @@ name('index');
                         Tickets
                     </h5>
                     <div class="bg-primary relative mt-40 flex-1 px-8 pb-20 pt-60">
-                        <div class="hexagon absolute -top-32 left-1/2 h-80 -translate-x-1/2 flex items-center justify-center px-8">
-                            <img src="{{ Vite::asset('resources/images/home/tickets.png') }}" alt="tickets" class="w-full">
+                        <div
+                            class="hexagon absolute -top-32 left-1/2 flex h-80 -translate-x-1/2 items-center justify-center px-8">
+                            <img src="{{ Vite::asset('resources/images/home/tickets.png') }}" alt="tickets"
+                                class="w-full"
+                            >
                         </div>
 
                         <p class="text-body">
@@ -131,33 +140,53 @@ name('index');
         </div>
     </section>
 
-    <section class="bg-gradient-to-r from-[#EDC30D] to-[#DA5915] pb-14 pt-16 text-white" x-data>
+    <section class="bg-gradient-to-r from-[#EDC30D] to-[#DA5915] pb-14 pt-16 text-white">
         <div class="container mx-auto p-4">
             <h2 class="text-heading-2-bold">
                 Meet Event Speakers
             </h2>
-            <div class="scrollbar-hidden mt-16 flex gap-4 overflow-x-scroll" x-ref="speakers-container">
-                @foreach (\App\Models\Speaker::all() as $speaker)
-                    <div class="w-full md:w-[calc(1/2_*_100%_-_(var(--spacing)_*_4))] lg:w-[calc(1/4_*_100%_-_(var(--spacing)_*_4))] shrink-0">
+            <div x-data="{
+                previous() {
+                        $refs.container.scrollBy({
+                            left: -$refs.container.clientWidth,
+                            behavior: 'smooth'
+                        });
+                    },
+                    next() {
+                        $refs.container.scrollBy({
+                            left: $refs.container.clientWidth,
+                            behavior: 'smooth'
+                        });
+                    }
+            }">
+                <div class="scrollbar-hidden mt-16 flex snap-x snap-mandatory gap-4 overflow-x-scroll"
+                    x-ref="container">
+                    @foreach (\App\Models\Speaker::all() as $speaker)
                         <div
-                            class="bg-conic from-dark-gray via-dark-gray aspect-square rounded-full via-25% to-[25.1%] p-2">
-                            <img src="{{ $speaker->image }}" alt="{{ $speaker->name }}"
-                                class="aspect-square h-auto w-full rounded-full bg-white"
-                            />
+                            class="w-full shrink-0 snap-start snap-always md:w-[calc(1/2_*_100%_-_(var(--spacing)_*_4))] lg:w-[calc(1/4_*_100%_-_(var(--spacing)_*_4))]">
+                            <div
+                                class="bg-conic from-dark-gray via-dark-gray mx-8 aspect-square rounded-full via-25% to-[25.1%] p-2">
+                                <img src="{{ Vite::asset($speaker->img) }}" alt="{{ $speaker->name }}" fall
+                                    class="aspect-square h-auto w-full rounded-full bg-white object-cover"
+                                />
+                            </div>
+                            <h4 class="text-heading-4-bold text-center">
+                                {{ $speaker->name }}
+                            </h4>
                         </div>
-                        <h4 class="text-heading-4-bold text-center">
-                            {{ $speaker->name }}
-                        </h4>
-                    </div>
-                @endforeach
-            </div>
-            <div class="flex justify-center gap-4">
-                <button class="bg-dark-gray h-14 cursor-pointer rounded-full p-4">
-                    <x-icon name="arrow_back" class="leading-0 text-2xl" />
-                </button>
-                <button class="h-14 cursor-pointer rounded-full bg-white p-4 text-black">
-                    <x-icon name="arrow_forward" />
-                </button>
+                    @endforeach
+                </div>
+                <div class="flex justify-center gap-4">
+                    <button type="button" class="bg-dark-gray h-14 cursor-pointer rounded-full p-4"
+                        @click="previous()">
+                        <x-icon name="arrow_back" class="leading-0 text-2xl" />
+                    </button>
+                    <button type="button" class="h-14 cursor-pointer rounded-full bg-white p-4 text-black"
+                        @click="next()"
+                    >
+                        <x-icon name="arrow_forward" />
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -226,11 +255,11 @@ name('index');
                     <div class="hexagon w-36 md:w-48">
 
                     </div>
-                    <div class="w-full md:w-auto md:hidden"></div>
-                    <div class="hexagon m-auto md:m-0 w-36 md:w-48">
+                    <div class="w-full md:hidden md:w-auto"></div>
+                    <div class="hexagon m-auto w-36 md:m-0 md:w-48">
 
                     </div>
-                    <div class="w-full md:w-auto md:hidden"></div>
+                    <div class="w-full md:hidden md:w-auto"></div>
                     <div>
                         <div class="hexagon w-36 md:w-48">
 

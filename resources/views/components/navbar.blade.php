@@ -2,7 +2,7 @@
     {{ $attributes->class(' bg-dark-gray/30 transition-colors') }}
     x-data="{ open: false, atTop: window.pageYOffset < window.innerHeight }"
     @scroll.window="atTop = (window.pageYOffset < window.innerHeight)"
-    :class="{ 'bg-dark-gray': !atTop, 'bg-dark-gray/30': atTop }"
+    :class="{ 'bg-dark-gray': !atTop || open, 'bg-dark-gray/30': atTop && !open }"
 >
     <div
         class="min-h-[96px] container mx-auto flex flex-wrap justify-between items-center px-4 pt-6 pb-5 lg:min-h-[120px]">

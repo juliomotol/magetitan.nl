@@ -121,20 +121,219 @@ name('index');
                 ]" />
             </section>
 
-            <section class="flex gap-4">
-                <div class="flex-1/2">
+            <section class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:grid-flow-col lg:gap-x-4">
+                <div class="lg:pr-16 xl:pr-32">
                     <h2 class="text-heading-2-bold">
                         Event Schedule
                     </h2>
-                    <p class="text-body mt-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi hic consequuntur, odio quia
-                        consectetur dolor quis incidunt sunt quibusdam officiis consequatur ab veritatis error maiores,
-                        labore id. Corporis, cumque expedita!
+                    <p class="text-body mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                        venenatis justo sed mauris vestibulum rhoncus. Nunc et viverra elit, nec ultricies sem.
+                        Phasellus a mi eget odio tincidunt iaculis sit amet id elit.
                     </p>
                     <x-button href="{{ route('agenda.index') }}" outlined class="mt-9">
                         More Details
                     </x-button>
-                    <h4 class="text-heading-4-bold mt-24">
+                </div>
+
+                <div class="lg:order-last row-span-2 relative">
+                    <div x-data="{ selectedTab: 'day1' }" class="w-full">
+                        <div class="border-outline flex gap-4 overflow-x-auto">
+                            <button type="button" class="w-48 border-b-2 pb-4 text-left"
+                                x-bind:class="selectedTab === 'day1' ? 'text-primary border-primary' : 'border-transparent'"
+                                x-on:click="selectedTab = 'day1'"
+                            >
+                                <h4 class="text-heading-4-bold">
+                                    Day 1
+                                </h4>
+                                <p class="text-body mt-2">
+                                    fri, 13 September 2024
+                                </p>
+                            </button>
+                            <button type="button" class="w-48 border-b-2 pb-4 text-left"
+                                x-bind:class="selectedTab === 'day2' ? 'text-primary border-primary' : 'border-transparent'"
+                                x-on:click="selectedTab = 'day2'"
+                            >
+                                <h4 class="text-heading-4-bold">
+                                    Day 2
+                                </h4>
+                                <p class="text-body mt-2">
+                                    sat, 14 September 2024
+                                </p>
+                            </button>
+                        </div>
+                        <div class="mt-10">
+                            <div x-cloak x-show="selectedTab === 'day1'" class="space-y-10">
+                                <div class="flex gap-10">
+                                    <div>
+                                        <div class="aspect-square w-[120px] bg-white"></div>
+                                        <p class="text-body mt-4">9.30 - 10.30</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-heading-5-bold">
+                                            Lorem ipsum dolor sit amet
+                                        </h5>
+                                        <p class="text-body mt-2">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+
+                                        <div class="mt-6 flex items-center gap-2">
+                                            <div class="aspect-square w-12 rounded-full bg-white"></div>
+                                            <div>
+                                                <p class="text-body underline">
+                                                    John Doe
+                                                </p>
+                                                <p class="text-body -mt-1">
+                                                    Function
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-10">
+                                    <div>
+                                        <div class="aspect-square w-[120px] bg-white"></div>
+                                        <p class="text-body mt-4">9.30 - 10.30</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-heading-5-bold">
+                                            Lorem ipsum dolor sit amet
+                                        </h5>
+                                        <p class="text-body mt-2">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+
+                                        <div class="mt-6 flex items-center gap-2">
+                                            <div class="aspect-square w-12 rounded-full bg-white"></div>
+                                            <div>
+                                                <p class="text-body underline">
+                                                    John Doe
+                                                </p>
+                                                <p class="text-body -mt-1">
+                                                    Function
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-10">
+                                    <div>
+                                        <div class="aspect-square w-[120px] bg-white"></div>
+                                        <p class="text-body mt-4">9.30 - 10.30</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-heading-5-bold">
+                                            Lorem ipsum dolor sit amet
+                                        </h5>
+                                        <p class="text-body mt-2">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+
+                                        <div class="mt-6 flex items-center gap-2">
+                                            <div class="aspect-square w-12 rounded-full bg-white"></div>
+                                            <div>
+                                                <p class="text-body underline">
+                                                    John Doe
+                                                </p>
+                                                <p class="text-body -mt-1">
+                                                    Function
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div x-cloak x-show="selectedTab === 'day2'" class="space-y-10">
+                                <div class="flex gap-10">
+                                    <div>
+                                        <div class="aspect-square w-[120px] bg-white"></div>
+                                        <p class="text-body mt-4">9.30 - 10.30</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-heading-5-bold">
+                                            Lorem ipsum dolor sit amet
+                                        </h5>
+                                        <p class="text-body mt-2">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+
+                                        <div class="mt-6 flex items-center gap-2">
+                                            <div class="aspect-square w-12 rounded-full bg-white"></div>
+                                            <div>
+                                                <p class="text-body underline">
+                                                    John Doe
+                                                </p>
+                                                <p class="text-body -mt-1">
+                                                    Function
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-10">
+                                    <div>
+                                        <div class="aspect-square w-[120px] bg-white"></div>
+                                        <p class="text-body mt-4">9.30 - 10.30</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-heading-5-bold">
+                                            Lorem ipsum dolor sit amet
+                                        </h5>
+                                        <p class="text-body mt-2">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+
+                                        <div class="mt-6 flex items-center gap-2">
+                                            <div class="aspect-square w-12 rounded-full bg-white"></div>
+                                            <div>
+                                                <p class="text-body underline">
+                                                    John Doe
+                                                </p>
+                                                <p class="text-body -mt-1">
+                                                    Function
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-10">
+                                    <div>
+                                        <div class="aspect-square w-[120px] bg-white"></div>
+                                        <p class="text-body mt-4">9.30 - 10.30</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-heading-5-bold">
+                                            Lorem ipsum dolor sit amet
+                                        </h5>
+                                        <p class="text-body mt-2">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+
+                                        <div class="mt-6 flex items-center gap-2">
+                                            <div class="aspect-square w-12 rounded-full bg-white"></div>
+                                            <div>
+                                                <p class="text-body underline">
+                                                    John Doe
+                                                </p>
+                                                <p class="text-body -mt-1">
+                                                    Function
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:pr-16 xl:pr-32">
+                    <h4 class="text-heading-4-bold">
                         Headline sponsor: Mollie
                     </h4>
                     <p class="text-body mt-6">
@@ -142,10 +341,6 @@ name('index');
                         offering a secure and flexible solution for processing online transactions. Visit
                         <a href="" class="underline">Mollie.nl</a> for more info!
                     </p>
-                </div>
-
-                <div class="flex-1/2">
-
                 </div>
             </section>
         </div>
@@ -171,7 +366,8 @@ name('index');
                     }
             }">
                 <div class="scrollbar-hidden mt-16 flex snap-x snap-mandatory gap-4 overflow-x-scroll"
-                    x-ref="container">
+                    x-ref="container"
+                >
                     @foreach (\App\Models\Speaker::all() as $speaker)
                         <div
                             class="w-full shrink-0 snap-start snap-always md:w-[calc(1/2_*_100%_-_(var(--spacing)_*_4))] lg:w-[calc(1/4_*_100%_-_(var(--spacing)_*_4))]">
@@ -189,7 +385,8 @@ name('index');
                 </div>
                 <div class="flex justify-center gap-4">
                     <button type="button" class="bg-dark-gray h-14 cursor-pointer rounded-full p-4"
-                        @click="previous()">
+                        @click="previous()"
+                    >
                         <x-icon name="arrow_back" class="leading-0 text-2xl" />
                     </button>
                     <button type="button" class="h-14 cursor-pointer rounded-full bg-white p-4 text-black"
@@ -264,7 +461,7 @@ name('index');
                         @if ($loop->iteration === 3)
                             <div class="w-full md:hidden md:w-auto"></div>
                         @endif
-                        <div class="hexagon w-36 md:w-48 flex items-center px-6">
+                        <div class="hexagon flex w-36 items-center px-6 md:w-48">
                             <img src="{{ Vite::asset($sponsor->img) }}" alt="{{ $sponsor->name }}" class="w-full" />
                         </div>
                         @if ($loop->iteration === 3)

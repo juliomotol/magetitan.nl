@@ -10,42 +10,36 @@ name('index');
 @endphp
 
 <x-layout.base>
-    <section
-        class="min-h-screen bg-[url('/resources/images/home/home.png')] bg-cover bg-right bg-no-repeat pb-[60px] pt-[180px]"
-    >
-        <div class="container mx-auto h-full px-4">
-            <div class="bg-black/55 p-7 pb-12 text-white lg:w-[835px]">
-                <h1 class="text-heading-3-bold">
-                    MageTitans Groningen is back!<br />
-                    Friday September 13th, 2024
-                </h1>
-                <p class="text-body mt-3">
-                    MageTitans is a Magento event purely focussed on developers. So expect talks about Magento
-                    performance, <a href="" class="text-primary underline">Hyvä</a>, PHP, soft skills, dev-ops,
-                    etcetera. Between talks, you have the opportunity get to
-                    know your colleagues from other companies.
-                </p>
-                <div class="mt-7 flex items-center gap-10">
-                    <div>
-                        <p class="text-heading-5-bold">
-                            13 September 2024
-                        </p>
-                        <p class="text-body">
-                            Dot, Groningen
-                        </p>
-                    </div>
-                    <x-button href="https://www.eventbrite.com/e/magetitans-groningen-tickets-862029402147"
-                        target="_blank"
-                    >
-                        Get your tickets here!
-                    </x-button>
+    <x-hero-section class="bg-[url('/resources/images/home/home.png')]" fullScreen>
+        <div class="lg:w-[843px]">
+            <h1 class="text-heading-3-bold">
+                MageTitans Groningen is back!<br />
+                Friday September 13th, 2024
+            </h1>
+            <p class="text-body mt-3">
+                MageTitans is a Magento event purely focussed on developers. So expect talks about Magento
+                performance, <a href="" class="text-primary underline">Hyvä</a>, PHP, soft skills, dev-ops,
+                etcetera. Between talks, you have the opportunity get to
+                know your colleagues from other companies.
+            </p>
+            <div class="mt-7 flex items-center gap-10">
+                <div>
+                    <p class="text-heading-5-bold">
+                        13 September 2024
+                    </p>
+                    <p class="text-body">
+                        Dot, Groningen
+                    </p>
                 </div>
+                <x-button href="https://www.eventbrite.com/e/magetitans-groningen-tickets-862029402147" target="_blank">
+                    Get your tickets here!
+                </x-button>
             </div>
         </div>
-    </section>
+    </x-hero-section>
 
     <section class="bg-dark-gray bg-overlay pb-12 pt-16 text-white">
-        <div class="container mx-auto space-y-12 p-4">
+        <div class="container relative mx-auto space-y-12 p-4">
             <section class="flex flex-col gap-4 lg:flex-row">
                 <div class="flex-1/3 flex flex-col">
                     <h5 class="text-heading-5-bold text-center">
@@ -121,7 +115,7 @@ name('index');
                 ]" />
             </section>
 
-            <section class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:grid-flow-col lg:gap-x-4">
+            <section class="space-y-10 lg:grid lg:grid-flow-col lg:grid-cols-2 lg:grid-rows-2 lg:gap-x-4 lg:space-y-0">
                 <div class="lg:pr-16 xl:pr-32">
                     <h2 class="text-heading-2-bold">
                         Event Schedule
@@ -135,7 +129,7 @@ name('index');
                     </x-button>
                 </div>
 
-                <div class="lg:order-last row-span-2 relative">
+                <div class="relative row-span-2 lg:order-last">
                     <div x-data="{ selectedTab: 'day1' }" class="w-full">
                         <div class="border-outline flex gap-4 overflow-x-auto">
                             <button type="button" class="w-48 border-b-2 pb-4 text-left"
@@ -369,18 +363,9 @@ name('index');
                     x-ref="container"
                 >
                     @foreach (\App\Models\Speaker::all() as $speaker)
-                        <div
-                            class="w-full shrink-0 snap-start snap-always md:w-[calc(1/2_*_100%_-_(var(--spacing)_*_4))] lg:w-[calc(1/4_*_100%_-_(var(--spacing)_*_4))]">
-                            <div
-                                class="bg-conic from-dark-gray via-dark-gray mx-8 aspect-square rounded-full via-25% to-[25.1%] p-2">
-                                <img src="{{ Vite::asset($speaker->img) }}" alt="{{ $speaker->name }}" fall
-                                    class="aspect-square h-auto w-full rounded-full bg-white object-cover"
-                                />
-                            </div>
-                            <h4 class="text-heading-4-bold text-center">
-                                {{ $speaker->name }}
-                            </h4>
-                        </div>
+                        <x-speaker.item :speaker="$speaker"
+                            class="w-full shrink-0 snap-start snap-always md:w-[calc(1/2_*_100%_-_(var(--spacing)_*_4))] lg:w-[calc(1/4_*_100%_-_(var(--spacing)_*_4))]"
+                        />
                     @endforeach
                 </div>
                 <div class="flex justify-center gap-4">
@@ -400,7 +385,7 @@ name('index');
     </section>
 
     <section class="bg-dark-gray bg-overlay overflow-hidden pb-12 pt-16 text-white">
-        <div class="container mx-auto p-4">
+        <div class="container relative mx-auto p-4">
             <section>
                 <h2 class="text-heading-2-bold">
                     Buy your tickets now!

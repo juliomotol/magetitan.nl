@@ -78,7 +78,7 @@ name('tickets.index');
                         @if ($loop->iteration === 3)
                             <div class="w-full md:hidden md:w-auto"></div>
                         @endif
-                        <div class="hexagon flex w-36 items-center px-6 md:w-48">
+                        <div class="hexagon flex w-2/5 items-center px-6 md:w-52">
                             <img src="{{ Vite::asset($sponsor->img) }}" alt="{{ $sponsor->name }}" class="w-full" />
                         </div>
                         @if ($loop->iteration === 3)

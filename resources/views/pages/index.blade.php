@@ -47,7 +47,7 @@ name('index');
                     </h5>
                     <div class="bg-primary relative mt-40 flex-1 px-8 pb-20 pt-60">
                         <div
-                            class="hexagon absolute -top-32 left-1/2 flex h-80 -translate-x-1/2 items-center justify-center px-8">
+                            class="hexagon absolute -top-32 left-1/2 flex w-72 -translate-x-1/2 items-center justify-center px-8">
                             <img src="{{ Vite::asset('resources/images/home/harstichting.png') }}" alt="harstichting"
                                 class="w-full"
                             >
@@ -66,7 +66,7 @@ name('index');
                     </h5>
                     <div class="bg-primary relative mt-40 flex-1 px-8 pb-20 pt-60">
                         <div
-                            class="hexagon absolute -top-32 left-1/2 flex h-80 -translate-x-1/2 items-center justify-center px-8">
+                            class="hexagon absolute -top-32 left-1/2 flex w-72 -translate-x-1/2 items-center justify-center px-8">
                             <img src="{{ Vite::asset('resources/images/home/mollie.png') }}" alt="mollie"
                                 class="w-full"
                             >
@@ -85,7 +85,7 @@ name('index');
                     </h5>
                     <div class="bg-primary relative mt-40 flex-1 px-8 pb-20 pt-60">
                         <div
-                            class="hexagon absolute -top-32 left-1/2 flex h-80 -translate-x-1/2 items-center justify-center px-8">
+                            class="hexagon absolute -top-32 left-1/2 flex w-72 -translate-x-1/2 items-center justify-center px-8">
                             <img src="{{ Vite::asset('resources/images/home/tickets.png') }}" alt="tickets"
                                 class="w-full"
                             >
@@ -446,7 +446,7 @@ name('index');
                         @if ($loop->iteration === 3)
                             <div class="w-full md:hidden md:w-auto"></div>
                         @endif
-                        <div class="hexagon flex w-36 items-center px-6 md:w-48">
+                        <div class="hexagon flex w-2/5 items-center px-6 md:w-52">
                             <img src="{{ Vite::asset($sponsor->img) }}" alt="{{ $sponsor->name }}" class="w-full" />
                         </div>
                         @if ($loop->iteration === 3)

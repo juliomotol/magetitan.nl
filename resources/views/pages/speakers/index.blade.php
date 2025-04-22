@@ -17,7 +17,7 @@ name('speakers.index');
         </h1>
     </x-hero-section>
 
-    <section class="bg-dark-gray bg-overlay pb-12 pt-16 text-white">
+    <section class="bg-dark-gray bg-overlay pb-12 pt-28 text-white">
         <div class="container relative mx-auto space-y-12 p-4">
             <section>
                 <h2 class="text-heading-2-bold">

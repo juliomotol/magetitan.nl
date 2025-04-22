@@ -21,7 +21,7 @@ name('speakers.show');
         </div>
     </x-hero-section>
 
-    <section class="bg-dark-gray bg-overlay py-16 text-white md:py-32">
+    <section class="bg-dark-gray bg-overlay py-16 text-white md:py-28">
         <div class="container relative mx-auto space-y-12 p-4">
             <section class="space-y-10 md:flex md:gap-20 md:space-y-0">
                 <div class="md:max-w-initial mx-auto max-w-96 space-y-6 md:mx-0 md:w-64 md:shrink-0 lg:w-96">

@@ -23,7 +23,7 @@ name('speakers.index');
                 <h2 class="text-heading-2-bold">
                     Meet Event Speakers
                 </h2>
-                <div class="mt-20 space-y-4 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 lg:grid-cols-4">
+                <div class="mt-20 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
                     @foreach ($speakers as $speaker)
                         <x-speaker.item :speaker="$speaker" borderColor="primary" />
                     @endforeach

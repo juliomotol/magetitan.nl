@@ -4,9 +4,11 @@ use function Laravel\Folio\name;
 use App\Models\Speaker;
 
 name('speakers.index');
-
-$speakers = Speaker::all();
 ?>
+
+@php
+    $speakers = Speaker::all();
+@endphp
 
 <x-layout.base>
     <x-hero-section class="bg-[url('/resources/images/home/home.png')]">
@@ -16,12 +18,12 @@ $speakers = Speaker::all();
     </x-hero-section>
 
     <section class="bg-dark-gray bg-overlay pb-12 pt-16 text-white">
-        <div class="container mx-auto space-y-12 p-4 relative">
+        <div class="container relative mx-auto space-y-12 p-4">
             <section>
                 <h2 class="text-heading-2-bold">
                     Meet Event Speakers
                 </h2>
-                <div class="mt-20 space-y-4 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8">
+                <div class="mt-20 space-y-4 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 lg:grid-cols-4">
                     @foreach ($speakers as $speaker)
                         <x-speaker.item :speaker="$speaker" borderColor="primary" />
                     @endforeach

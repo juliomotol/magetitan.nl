@@ -1,34 +1,22 @@
-<nav
-    {{ $attributes->class(' bg-dark-gray/30 transition-colors') }}
-    x-data="{ open: false, atTop: window.pageYOffset < window.innerHeight }"
+<nav {{ $attributes->class(' bg-dark-gray/30 transition-colors') }} x-data="{ open: false, atTop: window.pageYOffset < window.innerHeight }"
     @scroll.window="atTop = (window.pageYOffset < window.innerHeight)"
     :class="{ 'bg-dark-gray': !atTop || open, 'bg-dark-gray/30': atTop && !open }"
 >
     <div
-        class="min-h-[96px] container mx-auto flex flex-wrap justify-between items-center px-4 pt-6 pb-5 lg:min-h-[120px]">
-        <a
-            href="{{ route('index') }}"
-            class="flex items-center space-x-3"
-        >
-            <img
-                src="{{ Vite::asset('resources/images/heading-logo.png') }}"
-                alt="Magetitans"
-                class="w-[120px]"
-            >
+        class="container mx-auto flex min-h-[96px] flex-wrap items-center justify-between px-4 pb-5 pt-6 lg:min-h-[120px]">
+        <a href="{{ route('index') }}" class="flex items-center space-x-3">
+            <img src="{{ Vite::asset('resources/images/heading-logo.png') }}" alt="Magetitans" class="w-[120px]">
         </a>
 
         <div class="flex space-x-3 lg:order-2 lg:space-x-0">
-            <x-button
-                href="https://www.eventbrite.com/e/magetitans-groningen-tickets-862029402147"
-                target="_blank"
+            <x-button href="https://www.eventbrite.com/e/magetitans-groningen-tickets-862029402147" target="_blank"
                 class="w-[120px]"
             >
                 Register
             </x-button>
             </a>
-            <button
-                type="button"
-                class="size-12 inline-flex justify-center items-center p-2 text-white rounded-lg lg:hidden"
+            <button type="button"
+                class="inline-flex size-12 items-center justify-center rounded-lg p-2 text-white lg:hidden"
                 @click="open = !open"
             >
                 <span class="sr-only">Open main menu</span>
@@ -50,21 +38,17 @@
             </button>
         </div>
 
-        <div
-            class="w-full hidden justify-between items-center lg:w-auto lg:flex lg:order-1"
+        <div class="hidden w-full items-center justify-between lg:order-1 lg:flex lg:w-auto"
             :class="{ 'hidden': !open }"
         >
-            <ul class="flex flex-col gap-4 p-4 mt-5 text-white lg:flex-row lg:gap-6 lg:p-0 lg:mt-0 xl:gap-12">
+            <ul class="mt-5 flex flex-col gap-4 p-4 text-white lg:mt-0 lg:flex-row lg:gap-6 lg:p-0 xl:gap-12">
                 @foreach ($navigation as $item)
                     <li>
-                        <a
-                            href="{{ route($item->route) }}"
-                            @class([
-                                'h-full pb-1 border-b-4',
-                                'border-primary' => Route::is($item->route),
-                                'border-transparent' => !Route::is($item->route),
-                            ])
-                        >
+                        <a href="{{ route($item->route) }}" @class([
+                            'h-full pb-1 border-b-4',
+                            'border-primary' => Route::is($item->route),
+                            'border-transparent' => !Route::is($item->route),
+                        ])>
                             {{ $item->title }}
                         </a>
                     </li>

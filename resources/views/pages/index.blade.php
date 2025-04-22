@@ -5,6 +5,10 @@ use function Laravel\Folio\name;
 name('index');
 ?>
 
+@php
+    $featuredSponsors = App\Models\Sponsor::all()->whereNotNull('featured')->sortBy('featured');
+@endphp
+
 <x-layout.base>
     <section
         class="min-h-screen bg-[url('/resources/images/home/home.png')] bg-cover bg-right bg-no-repeat pb-[60px] pt-[180px]"
@@ -256,27 +260,17 @@ name('index');
                     We are very proud of our sponsors and their commitment to this event.
                 </p>
                 <div class="mt-8 flex flex-wrap items-center justify-center gap-x-10">
-                    <div class="hexagon w-36 md:w-48">
-
-                    </div>
-                    <div class="hexagon w-36 md:w-48">
-
-                    </div>
-                    <div class="w-full md:hidden md:w-auto"></div>
-                    <div class="hexagon m-auto w-36 md:m-0 md:w-48">
-
-                    </div>
-                    <div class="w-full md:hidden md:w-auto"></div>
-                    <div>
-                        <div class="hexagon w-36 md:w-48">
-
+                    @foreach ($featuredSponsors as $sponsor)
+                        @if ($loop->iteration === 3)
+                            <div class="w-full md:hidden md:w-auto"></div>
+                        @endif
+                        <div class="hexagon w-36 md:w-48 flex items-center px-6">
+                            <img src="{{ Vite::asset($sponsor->img) }}" alt="{{ $sponsor->name }}" class="w-full" />
                         </div>
-                    </div>
-                    <div>
-                        <div class="hexagon w-36 md:w-48">
-
-                        </div>
-                    </div>
+                        @if ($loop->iteration === 3)
+                            <div class="w-full md:hidden md:w-auto"></div>
+                        @endif
+                    @endforeach
                 </div>
             </section>
             <section class="mt-20">

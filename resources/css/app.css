@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@config "./tailwind.config.js";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -89,11 +91,11 @@
 
 @utility scrollbar-hidden {
     $::-webkit-scrollbar {
-        display: none;  /* Safari and Chrome */
+        display: none; /* Safari and Chrome */
     }
 
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 .bg-overlay {
@@ -102,15 +104,15 @@
 
 .bg-overlay:before {
     content: "";
-    @apply absolute top-0 left-0 w-full h-full;
+    @apply absolute top-0 left-0 size-full;
     background-image: url(/resources/images/bg-overlay.png);
     background-size: 100% auto;
 
     filter: opacity(50%);
 }
 
-.hexagon{
-  aspect-ratio: cos(30deg);
-  clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
-  @apply bg-white;
+.hexagon {
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
+    @apply bg-white;
 }

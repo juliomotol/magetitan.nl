@@ -55,7 +55,7 @@
             :class="{ 'hidden': !open }"
         >
             <ul class="flex flex-col gap-4 p-4 mt-5 text-white lg:flex-row lg:gap-6 lg:p-0 lg:mt-0 xl:gap-12">
-                @foreach (GlobalData::get('navigation') as $item)
+                @foreach ($navigation as $item)
                     <li>
                         <a
                             href="{{ route($item->route) }}"

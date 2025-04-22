@@ -28,12 +28,12 @@
             </a>
             <button
                 type="button"
-                class="w-12 h-12 inline-flex justify-center items-center p-2 text-white rounded-lg lg:hidden"
+                class="size-12 inline-flex justify-center items-center p-2 text-white rounded-lg lg:hidden"
                 @click="open = !open"
             >
                 <span class="sr-only">Open main menu</span>
                 <svg
-                    class="w-5 h-5"
+                    class="size-5"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

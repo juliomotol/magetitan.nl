@@ -3411,16 +3411,16 @@
         },
         {
             "name": "roelofjan-elsinga/aloia-cms",
-            "version": "4.4.1",
+            "version": "4.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roelofjan-elsinga/aloia-cms.git",
-                "reference": "0e1ae2ee991c1d10fe6d704a8e7b19bc933ee807"
+                "reference": "1615722de4555d8c964f6a9556d5ebd416cadc54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roelofjan-elsinga/aloia-cms/zipball/0e1ae2ee991c1d10fe6d704a8e7b19bc933ee807",
-                "reference": "0e1ae2ee991c1d10fe6d704a8e7b19bc933ee807",
+                "url": "https://api.github.com/repos/roelofjan-elsinga/aloia-cms/zipball/1615722de4555d8c964f6a9556d5ebd416cadc54",
+                "reference": "1615722de4555d8c964f6a9556d5ebd416cadc54",
                 "shasum": ""
             },
             "require": {
@@ -3474,7 +3474,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roelofjan-elsinga/aloia-cms/issues",
-                "source": "https://github.com/roelofjan-elsinga/aloia-cms/tree/4.4.1"
+                "source": "https://github.com/roelofjan-elsinga/aloia-cms/tree/4.4.2"
             },
             "funding": [
                 {
@@ -3486,7 +3486,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2024-11-14T12:28:00+00:00"
+            "time": "2025-04-22T17:07:36+00:00"
         },
         {
             "name": "roelofjan-elsinga/content-to-html-parser",
@@ -9751,12 +9751,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

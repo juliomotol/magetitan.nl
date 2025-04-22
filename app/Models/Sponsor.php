@@ -6,8 +6,6 @@ use AloiaCms\Models\Model;
 
 class Sponsor extends Model
 {
-    use Concerns\CollectionCompatibility;
-
     protected $required_field = [
         'level',
         'name',

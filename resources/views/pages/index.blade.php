@@ -106,8 +106,15 @@ name('index');
                 </div>
             </section>
 
-            <section class="aspect-video bg-white">
-
+            <section>
+                <x-image-carousel :slides="[
+                    'resources/images/gallery/2024/IMG_0611.jpg',
+                    'resources/images/gallery/2024/IMG_0612.jpg',
+                    'resources/images/gallery/2024/IMG_0614.jpg',
+                    'resources/images/gallery/2024/IMG_0617.jpg',
+                    'resources/images/gallery/2024/IMG_0619.jpg',
+                    'resources/images/gallery/2024/IMG_0620.jpg',
+                ]" />
             </section>
 
             <section class="flex gap-4">
@@ -273,9 +280,14 @@ name('index');
                 </div>
             </section>
             <section class="mt-20">
-                <div class="aspect-video bg-white">
-
-                </div>
+                <x-image-carousel :slides="[
+                    'resources/images/gallery/2024/IMG_0611.jpg',
+                    'resources/images/gallery/2024/IMG_0612.jpg',
+                    'resources/images/gallery/2024/IMG_0614.jpg',
+                    'resources/images/gallery/2024/IMG_0617.jpg',
+                    'resources/images/gallery/2024/IMG_0619.jpg',
+                    'resources/images/gallery/2024/IMG_0620.jpg',
+                ]" />
                 <div class="mt-12 justify-between lg:flex">
                     <h2 class="text-heading-2-bold">
                         Last Event Gallery

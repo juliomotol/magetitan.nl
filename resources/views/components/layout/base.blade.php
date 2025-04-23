@@ -50,6 +50,8 @@
 
     <x-footer />
 
+    <x-notifications />
+
     @vite('resources/js/app.js')
     @stack('scripts')
 </body>

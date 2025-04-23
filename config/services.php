@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'sender' => [
+        'token' => env('SENDER_TOKEN'),
+    ]
+
 ];

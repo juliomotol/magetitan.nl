@@ -10,7 +10,7 @@ name('tickets.index');
 @endphp
 
 <x-layout.base>
-    <x-hero-section class="bg-[url('/resources/images/home/home.png')]">
+    <x-hero-section class="bg-[url('/resources/images/ticket.jpg')]">
         <h1 class="text-heading-2-bold">
             Get The Ticket
         </h1>

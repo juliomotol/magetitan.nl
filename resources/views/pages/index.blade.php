@@ -10,7 +10,7 @@ name('index');
 @endphp
 
 <x-layout.base>
-    <x-hero-section class="bg-[url('/resources/images/home/home.png')]" fullScreen>
+    <x-hero-section class="bg-[url('/resources/images/home.png')]" fullScreen>
         <div class="lg:w-[843px]">
             <h1 class="text-heading-3-bold">
                 MageTitans Groningen is back!<br />
@@ -48,7 +48,7 @@ name('index');
                     <div class="bg-primary relative mt-40 flex-1 px-8 pb-20 pt-60">
                         <div
                             class="hexagon absolute -top-32 left-1/2 flex w-72 -translate-x-1/2 items-center justify-center px-8">
-                            <img src="{{ Vite::asset('resources/images/home/harstichting.png') }}" alt="harstichting"
+                            <img src="{{ Vite::asset('resources/images/harstichting.png') }}" alt="harstichting"
                                 class="w-full"
                             >
                         </div>
@@ -67,7 +67,7 @@ name('index');
                     <div class="bg-primary relative mt-40 flex-1 px-8 pb-20 pt-60">
                         <div
                             class="hexagon absolute -top-32 left-1/2 flex w-72 -translate-x-1/2 items-center justify-center px-8">
-                            <img src="{{ Vite::asset('resources/images/home/mollie.png') }}" alt="mollie"
+                            <img src="{{ Vite::asset('resources/images/mollie.png') }}" alt="mollie"
                                 class="w-full"
                             >
                         </div>
@@ -86,7 +86,7 @@ name('index');
                     <div class="bg-primary relative mt-40 flex-1 px-8 pb-20 pt-60">
                         <div
                             class="hexagon absolute -top-32 left-1/2 flex w-72 -translate-x-1/2 items-center justify-center px-8">
-                            <img src="{{ Vite::asset('resources/images/home/tickets.png') }}" alt="tickets"
+                            <img src="{{ Vite::asset('resources/images/tickets.png') }}" alt="tickets"
                                 class="w-full"
                             >
                         </div>

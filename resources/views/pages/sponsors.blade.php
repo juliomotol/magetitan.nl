@@ -19,7 +19,7 @@ name('sponsors.index');
 @endphp
 
 <x-layout.base>
-    <x-hero-section class="bg-[url('/resources/images/home/home.png')]">
+    <x-hero-section class="bg-[url('/resources/images/venue.jpg')]">
         <h1 class="text-heading-2-bold">
             Sponsors
         </h1>

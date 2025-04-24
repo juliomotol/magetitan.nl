@@ -11,7 +11,7 @@ name('speakers.index');
 @endphp
 
 <x-layout.base>
-    <x-hero-section class="bg-[url('/resources/images/home/home.png')]">
+    <x-hero-section class="bg-[url('/resources/images/speakers.jpg')] bg-top">
         <h1 class="text-heading-2-bold">
             List of Speakers
         </h1>

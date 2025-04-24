@@ -1,6 +1,11 @@
-<nav {{ $attributes->class(' bg-dark-gray/30 transition-colors') }} x-data="{ open: false, atTop: window.pageYOffset < window.innerHeight }"
-    @scroll.window="atTop = (window.pageYOffset < window.innerHeight)"
-    :class="{ 'bg-dark-gray': !atTop || open, 'bg-dark-gray/30': atTop && !open }"
+@push('scripts')
+    <script>
+        document.addEventListener('alpine:init', () => Alpine.store('navTransparent', true))
+    </script>
+@endpush
+
+<nav {{ $attributes->class(' bg-dark-gray/30 transition-colors') }} x-data="{ open: false }"
+    :class="{ 'bg-dark-gray': !$store.navTransparent || open, 'bg-dark-gray/30': $store.navTransparent && !open }"
 >
     <div
         class="container mx-auto flex min-h-[96px] flex-wrap items-center justify-between px-4 pb-5 pt-6 lg:min-h-[120px]">

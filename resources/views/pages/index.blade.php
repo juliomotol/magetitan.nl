@@ -359,19 +359,16 @@ name('index');
                         });
                     }
             }">
-                <div class="scrollbar-hidden mt-16 flex snap-x snap-mandatory gap-4 overflow-x-scroll"
-                    x-ref="container"
-                >
+                <div class="scrollbar-hidden mt-16 flex snap-x snap-mandatory overflow-x-scroll" x-ref="container">
                     @foreach (\App\Models\Speaker::all() as $speaker)
                         <x-speaker.item :speaker="$speaker"
-                            class="w-full shrink-0 snap-start snap-always md:w-[calc(1/2_*_100%_-_(var(--spacing)_*_4))] lg:w-[calc(1/4_*_100%_-_(var(--spacing)_*_4))]"
+                            class="w-full shrink-0 snap-start snap-always p-2 md:w-1/2 lg:w-1/4"
                         />
                     @endforeach
                 </div>
                 <div class="flex justify-center gap-4">
                     <button type="button" class="bg-dark-gray h-14 cursor-pointer rounded-full p-4"
-                        @click="previous()"
-                    >
+                        @click="previous()">
                         <x-icon name="arrow_back" class="leading-0 text-2xl" />
                     </button>
                     <button type="button" class="h-14 cursor-pointer rounded-full bg-white p-4 text-black"

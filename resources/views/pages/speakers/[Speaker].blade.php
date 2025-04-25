@@ -69,11 +69,10 @@ name('speakers.show');
                         });
                     }
             }">
-                <div class="scrollbar-hidden mt-16 flex snap-x snap-mandatory gap-4 overflow-x-scroll"
-                    x-ref="container">
+                <div class="scrollbar-hidden mt-16 flex snap-x snap-mandatory overflow-x-scroll" x-ref="container">
                     @foreach ($otherSpeakers as $speaker)
                         <x-speaker.item :speaker="$speaker"
-                            class="w-full shrink-0 snap-start snap-always md:w-[calc(1/2_*_100%_-_(var(--spacing)_*_4))] lg:w-[calc(1/4_*_100%_-_(var(--spacing)_*_4))]"
+                            class="w-full shrink-0 snap-start snap-always p-2 md:w-1/2 lg:w-1/4"
                         />
                     @endforeach
                 </div>

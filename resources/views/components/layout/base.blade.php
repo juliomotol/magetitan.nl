@@ -40,7 +40,7 @@
 </head>
 
 <body {{ $attributes->class('min-h-screen') }}>
-    <x-navbar class="fixed inset-x-0 top-0 z-10" />
+    <x-navbar />
 
     <main class="min-h-screen">
         {{ $slot }}

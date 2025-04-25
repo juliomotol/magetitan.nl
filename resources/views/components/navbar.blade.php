@@ -4,7 +4,7 @@
     </script>
 @endpush
 
-<nav {{ $attributes->class(' bg-dark-gray/30 transition-colors') }} x-data="{ open: false }"
+<nav {{ $attributes->class('fixed inset-x-0 top-0 z-30 bg-dark-gray/30 transition-colors') }} x-data="{ open: false }"
     :class="{ 'bg-dark-gray': !$store.navTransparent || open, 'bg-dark-gray/30': $store.navTransparent && !open }"
 >
     <div

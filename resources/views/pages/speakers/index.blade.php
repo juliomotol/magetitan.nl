@@ -17,20 +17,20 @@ name('speakers.index');
         </h1>
     </x-hero-section>
 
-    <section class="bg-dark-gray bg-overlay pb-12 pt-28 text-white">
-        <div class="container relative mx-auto space-y-12 p-4">
+    <section class="bg-dark-gray bg-overlay py-20 text-white">
+        <div class="container relative mx-auto space-y-20 p-4">
             <section>
                 <h2 class="text-heading-2-bold">
                     Meet Event Speakers
                 </h2>
-                <div class="mt-20 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+                <div class="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
                     @foreach ($speakers as $speaker)
                         <x-speaker.item :speaker="$speaker" borderColor="primary" />
                     @endforeach
                 </div>
             </section>
 
-            <section class="mt-10">
+            <section>
                 <x-image-carousel :slides="[
                     'resources/images/gallery/2024/IMG_0611.jpg',
                     'resources/images/gallery/2024/IMG_0612.jpg',
@@ -39,11 +39,11 @@ name('speakers.index');
                     'resources/images/gallery/2024/IMG_0619.jpg',
                     'resources/images/gallery/2024/IMG_0620.jpg',
                 ]" />
-                <div class="mt-12 justify-between lg:flex">
+                <div class="mt-12 space-y-4 lg:flex lg:justify-between">
                     <h2 class="text-heading-2-bold">
                         Last Event Gallery
                     </h2>
-                    <p class="text-body mt-4 lg:mt-0 lg:w-1/3">
+                    <p class="text-body lg:w-1/3">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.

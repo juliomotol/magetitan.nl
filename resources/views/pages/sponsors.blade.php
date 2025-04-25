@@ -25,9 +25,9 @@ name('sponsors.index');
         </h1>
     </x-hero-section>
 
-    <section class="bg-dark-gray bg-overlay overflow-hidden pb-20 pt-28 text-white">
-        <div class="container relative mx-auto space-y-16 p-4">
-            <section class="space-y-8">
+    <section class="bg-dark-gray bg-overlay overflow-hidden py-20 text-white">
+        <div class="container relative mx-auto space-y-20 p-4">
+            <section class="space-y-4">
                 <h2 class="text-heading-2-bold">
                     Sponsorships
                 </h2>
@@ -35,12 +35,12 @@ name('sponsors.index');
                     We are very proud of our sponsors and their commitment to this event.
                 </p>
             </section>
-            <section class="space-y-8 text-center">
+            <section class="space-y-12 text-center">
                 @if ($headlineSponsors->isNotEmpty())
                     <h2 class="text-heading-2-bold">
                         Headline Sponsor
                     </h2>
-                    <div class="flex items-center justify-center gap-8">
+                    <div class="flex flex-wrap items-center justify-center gap-16">
                         @foreach ($headlineSponsors as $sponsor)
                             <div class="hexagon flex w-72 items-center justify-center px-8">
                                 <img src="{{ Vite::asset($sponsor->img) }}" alt="{{ $sponsor->name }}" class="w-full">

@@ -16,13 +16,13 @@ name('tickets.index');
         </h1>
     </x-hero-section>
 
-    <section class="bg-dark-gray bg-overlay overflow-hidden pb-20 pt-28 text-white">
-        <div class="container relative mx-auto p-4">
-            <section>
+    <section class="bg-dark-gray bg-overlay overflow-hidden py-20 text-white">
+        <div class="container relative mx-auto space-y-20 p-4">
+            <section class="space-y-4">
                 <h2 class="text-heading-2-bold">
                     Buy your tickets now!
                 </h2>
-                <p class="text-body mt-8">
+                <p class="text-body">
                     After a great event in 2019, the Titans are back for another event! This year we'll be in the
                     <a href="{{ route('venue.index') }}" class="underline">DOT - Groningen</a> on September 13th 2024.
                     Don't
@@ -32,9 +32,9 @@ name('tickets.index');
                     discussions. There will also be an opportunity to provide feedback, so if there are any topics you’d
                     like us to cover at future events, we want to know!
                 </p>
-                <div class="relative mt-16 justify-center gap-12 space-y-12 md:flex md:space-y-0">
+                <div class="relative mt-12 flex flex-col items-center justify-center gap-12 md:flex-row">
                     <div class="absolute top-1/2 hidden h-64 w-dvw -translate-y-1/2 bg-black md:block"></div>
-                    <div class="bg-primary-lighter relative p-8 lg:w-[400px]">
+                    <div class="bg-primary-lighter relative max-w-[400px] p-8">
                         <p class="text-body">
                             Regular
                         </p>
@@ -49,7 +49,7 @@ name('tickets.index');
                             <x-icon name="shopping_cart" /> Get Ticket
                         </x-button>
                     </div>
-                    <div class="bg-primary-darker relative p-8 lg:w-[400px]">
+                    <div class="bg-primary-darker relative max-w-[400px] p-8">
                         <p class="text-body">
                             Golden
                         </p>
@@ -66,14 +66,14 @@ name('tickets.index');
                     </div>
                 </div>
             </section>
-            <section class="mt-28">
+            <section class="space-y-4">
                 <h2 class="text-heading-2-bold">
                     Our Sponsor and Partners
                 </h2>
-                <p class="text-body mt-4">
+                <p class="text-body">
                     We are very proud of our sponsors and their commitment to this event.
                 </p>
-                <div class="mt-8 flex flex-wrap items-center justify-center gap-x-10">
+                <div class="mt-12 flex flex-wrap items-center justify-center gap-x-10">
                     @foreach ($featuredSponsors as $sponsor)
                         @if ($loop->iteration === 3)
                             <div class="w-full md:hidden md:w-auto"></div>

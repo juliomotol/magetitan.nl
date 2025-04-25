@@ -11,20 +11,20 @@ name('speakers.show');
 
 <x-layout.base>
     <x-hero-section style="background-image: url('{{ Vite::asset($speaker->heroImg) }}');">
-        <div class="lg:w-[555px]">
+        <div class="space-y-4 lg:w-[555px]">
             <h1 class="text-heading-5-bold">
                 {{ $speaker->name }} - {{ $speaker->title }}
             </h1>
-            <p class="text-body mt-4">
+            <p class="text-body">
                 {{ $speaker->description }}
             </p>
         </div>
     </x-hero-section>
 
-    <section class="bg-dark-gray bg-overlay py-16 text-white md:py-28">
-        <div class="container relative mx-auto space-y-12 p-4">
-            <section class="space-y-10 md:flex md:gap-20 md:space-y-0">
-                <div class="md:max-w-initial mx-auto max-w-96 space-y-6 md:mx-0 md:w-64 md:shrink-0 lg:w-96">
+    <section class="bg-dark-gray bg-overlay py-16 text-white md:py-20">
+        <div class="container relative mx-auto space-y-20 p-4">
+            <section class="flex flex-col gap-10 md:flex-row md:gap-20">
+                <div class="mx-auto max-w-96 space-y-6 md:mx-0 md:w-64 md:shrink-0 xl:w-96">
                     <img src="{{ Vite::asset($speaker->img) }}" alt="{{ $speaker->name }}"
                         class="border-primary aspect-square w-full rounded-full border-[12px] object-cover"
                     >
@@ -50,7 +50,7 @@ name('speakers.show');
         </div>
     </section>
 
-    <section class="bg-gradient-to-r from-[#EDC30D] to-[#DA5915] pb-14 pt-16 text-white">
+    <section class="bg-gradient-to-r from-[#EDC30D] to-[#DA5915] py-20 text-white">
         <div class="container mx-auto p-4">
             <h2 class="text-heading-2-bold">
                 Meet Other Event Speakers
@@ -102,11 +102,11 @@ name('speakers.show');
                     'resources/images/gallery/2024/IMG_0619.jpg',
                     'resources/images/gallery/2024/IMG_0620.jpg',
                 ]" />
-                <div class="mt-12 justify-between lg:flex">
+                <div class="mt-12 space-y-4 lg:flex lg:justify-between">
                     <h2 class="text-heading-2-bold">
                         Last Event Gallery
                     </h2>
-                    <p class="text-body mt-4 lg:mt-0 lg:w-1/3">
+                    <p class="text-body lg:w-1/3">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.

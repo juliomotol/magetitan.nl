@@ -55,39 +55,13 @@ name('speakers.show');
             <h2 class="text-heading-2-bold">
                 Meet Other Event Speakers
             </h2>
-            <div x-data="{
-                previous() {
-                        $refs.container.scrollBy({
-                            left: -$refs.container.clientWidth,
-                            behavior: 'smooth'
-                        });
-                    },
-                    next() {
-                        $refs.container.scrollBy({
-                            left: $refs.container.clientWidth,
-                            behavior: 'smooth'
-                        });
-                    }
-            }">
-                <div class="scrollbar-hidden mt-16 flex snap-x snap-mandatory overflow-x-scroll" x-ref="container">
+            <x-slider class="mt-12">
                     @foreach ($otherSpeakers as $speaker)
-                        <x-speaker.item :speaker="$speaker"
-                            class="w-full shrink-0 snap-start snap-always p-2 md:w-1/2 lg:w-1/4"
+                    <x-speaker.item
+                        :speaker="$speaker" class="w-full shrink-0 snap-start snap-always p-2 md:w-1/2 lg:w-1/4"
                         />
                     @endforeach
-                </div>
-                <div class="flex justify-center gap-4">
-                    <button type="button" class="bg-dark-gray h-14 cursor-pointer rounded-full p-4"
-                        @click="previous()">
-                        <x-icon name="arrow_back" class="leading-0 text-2xl" />
-                    </button>
-                    <button type="button" class="h-14 cursor-pointer rounded-full bg-white p-4 text-black"
-                        @click="next()"
-                    >
-                        <x-icon name="arrow_forward" />
-                    </button>
-                </div>
-            </div>
+            </x-slider>
         </div>
     </section>
 

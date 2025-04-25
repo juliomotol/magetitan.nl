@@ -158,7 +158,7 @@ name('index');
                     </div>
                 </div>
 
-                <div class="lg:pr-16 xl:pr-32 space-y-4">
+                <div class="space-y-4 lg:pr-16 xl:pr-32">
                     <h4 class="text-heading-4-bold">
                         Headline sponsor: Mollie
                     </h4>
@@ -177,44 +177,18 @@ name('index');
             <h2 class="text-heading-2-bold">
                 Meet Event Speakers
             </h2>
-            <div x-data="{
-                previous() {
-                        $refs.container.scrollBy({
-                            left: -$refs.container.clientWidth,
-                            behavior: 'smooth'
-                        });
-                    },
-                    next() {
-                        $refs.container.scrollBy({
-                            left: $refs.container.clientWidth,
-                            behavior: 'smooth'
-                        });
-                    }
-            }">
-                <div class="scrollbar-hidden mt-16 flex snap-x snap-mandatory overflow-x-scroll" x-ref="container">
-                    @foreach ($speakers as $speaker)
-                        <x-speaker.item :speaker="$speaker"
-                            class="w-full shrink-0 snap-start snap-always p-2 md:w-1/2 lg:w-1/4"
-                        />
-                    @endforeach
-                </div>
-                <div class="flex justify-center gap-4">
-                    <button type="button" class="bg-dark-gray h-14 cursor-pointer rounded-full p-4"
-                        @click="previous()">
-                        <x-icon name="arrow_back" class="leading-0 text-2xl" />
-                    </button>
-                    <button type="button" class="h-14 cursor-pointer rounded-full bg-white p-4 text-black"
-                        @click="next()"
-                    >
-                        <x-icon name="arrow_forward" />
-                    </button>
-                </div>
-            </div>
+            <x-slider class="mt-12">
+                @foreach ($speakers as $speaker)
+                    <x-speaker.item
+                        :speaker="$speaker" class="w-full shrink-0 snap-start snap-always p-2 md:w-1/2 lg:w-1/4"
+                    />
+                @endforeach
+            </x-slider>
         </div>
     </section>
 
     <section class="bg-dark-gray bg-overlay overflow-hidden py-20 text-white">
-        <div class="container relative mx-auto p-4 space-y-20">
+        <div class="container relative mx-auto space-y-20 p-4">
             <section class="space-y-4">
                 <h2 class="text-heading-2-bold">
                     Buy your tickets now!
@@ -229,9 +203,9 @@ name('index');
                     discussions. There will also be an opportunity to provide feedback, so if there are any topics you’d
                     like us to cover at future events, we want to know!
                 </p>
-                <div class="relative mt-12 justify-center gap-12 flex flex-col items-center md:flex-row">
+                <div class="relative mt-12 flex flex-col items-center justify-center gap-12 md:flex-row">
                     <div class="absolute top-1/2 hidden h-64 w-dvw -translate-y-1/2 bg-black md:block"></div>
-                    <div class="bg-primary-lighter relative p-8 max-w-[400px]">
+                    <div class="bg-primary-lighter relative max-w-[400px] p-8">
                         <p class="text-body">
                             Regular
                         </p>
@@ -246,7 +220,7 @@ name('index');
                             <x-icon name="shopping_cart" /> Get Ticket
                         </x-button>
                     </div>
-                    <div class="bg-primary-darker relative p-8 max-w-[400px]">
+                    <div class="bg-primary-darker relative max-w-[400px] p-8">
                         <p class="text-body">
                             Golden
                         </p>

@@ -77,79 +77,25 @@ name('venue.index');
                     architecto ab ipsa labore natus minus accusamus perspiciatis cupiditate, culpa magnam. Hic quam
                     excepturi aspernatur odio ex commodi!
                 </p>
-                <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                    <div class="bg-primary p-8">
-                        <div
-                            class="bg-dark-gray flex aspect-square size-[88px] items-center justify-center rounded-full">
-                            <x-icon name="local_cafe" class="!text-[2.5rem]" />
-                        </div>
-                        <h5 class="text-heading-5-bold mt-6">
-                            Hall Conference
-                        </h5>
-                        <p class="text-body mt-4">
+                <div class="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    <x-venue.item icon="local_cafe" title="Hall Conference">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </p>
-                    </div>
-                    <div class="bg-primary p-8">
-                        <div
-                            class="bg-dark-gray flex aspect-square size-[88px] items-center justify-center rounded-full">
-                            <x-icon name="hotel" class="!text-[2.5rem]" />
-                        </div>
-                        <h5 class="text-heading-5-bold mt-6">
-                            Accommodation
-                        </h5>
-                        <p class="text-body mt-4">
+                    </x-venue.item>
+                    <x-venue.item icon="hotel" title="Accommodation">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </p>
-                    </div>
-                    <div class="bg-primary p-8">
-                        <div
-                            class="bg-dark-gray flex aspect-square size-[88px] items-center justify-center rounded-full">
-                            <x-icon name="restaurant" class="!text-[2.5rem]" />
-                        </div>
-                        <h5 class="text-heading-5-bold mt-6">
-                            Healthy Food
-                        </h5>
-                        <p class="text-body mt-4">
+                    </x-venue.item>
+                    <x-venue.item icon="restaurant" title="Healthy Food">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </p>
-                    </div>
-                    <div class="bg-primary p-8">
-                        <div
-                            class="bg-dark-gray flex aspect-square size-[88px] items-center justify-center rounded-full">
-                            <x-icon name="directions_car" class="!text-[2.5rem]" />
-                        </div>
-                        <h5 class="text-heading-5-bold mt-6">
-                            Personal Transportation
-                        </h5>
-                        <p class="text-body mt-4">
+                    </x-venue.item>
+                    <x-venue.item icon="directions_car" title="Personal Transportation">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </p>
-                    </div>
-                    <div class="bg-primary p-8">
-                        <div
-                            class="bg-dark-gray flex aspect-square size-[88px] items-center justify-center rounded-full">
-                            <x-icon name="verified_user" class="!text-[2.5rem]" />
-                        </div>
-                        <h5 class="text-heading-5-bold mt-6">
-                            High Privacy and Security
-                        </h5>
-                        <p class="text-body mt-4">
+                    </x-venue.item>
+                    <x-venue.item icon="verified_user" title="High Privacy and Security">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </p>
-                    </div>
-                    <div class="bg-primary p-8">
-                        <div
-                            class="bg-dark-gray flex aspect-square size-[88px] items-center justify-center rounded-full">
-                            <x-icon name="workspace_premium" class="!text-[2.5rem]" />
-                        </div>
-                        <h5 class="text-heading-5-bold mt-6">
-                            Best Quality Services
-                        </h5>
-                        <p class="text-body mt-4">
+                    </x-venue.item>
+                    <x-venue.item icon="workspace_premium" title="Best Quality Services">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </p>
-                    </div>
+                    </x-venue.item>
                 </div>
             </section>
             <section class="lg:flex lg:items-stretch">

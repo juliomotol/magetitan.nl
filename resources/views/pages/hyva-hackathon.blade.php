@@ -5,7 +5,7 @@ use function Laravel\Folio\name;
 name('hyva-hackathon.index');
 ?>
 
-<x-layout.base>
+<x-layout.base title="Hackathon">
     <x-hero-section class="bg-[url('/resources/images/venue.jpg')]">
         <h1 class="text-heading-2-bold">
             Hackathon

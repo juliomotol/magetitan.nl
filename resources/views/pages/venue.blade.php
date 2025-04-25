@@ -5,7 +5,7 @@ use function Laravel\Folio\name;
 name('venue.index');
 ?>
 
-<x-layout.base>
+<x-layout.base title="Venue">
     <x-hero-section class="bg-[url('/resources/images/venue.jpg')]">
         <h1 class="text-heading-2-bold">
             About the Venue

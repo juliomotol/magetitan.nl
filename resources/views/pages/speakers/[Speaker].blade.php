@@ -9,7 +9,7 @@ name('speakers.show');
     $otherSpeakers = \App\Models\Speaker::all()->where('name', '!==', $speaker->name);
 @endphp
 
-<x-layout.base>
+<x-layout.base :title="$speaker->title">
     <x-hero-section style="background-image: url('{{ Vite::asset($speaker->heroImg) }}');">
         <div class="space-y-4 lg:w-[555px]">
             <h1 class="text-heading-5-bold">
@@ -56,11 +56,11 @@ name('speakers.show');
                 Meet Other Event Speakers
             </h2>
             <x-slider class="mt-12">
-                    @foreach ($otherSpeakers as $speaker)
+                @foreach ($otherSpeakers as $speaker)
                     <x-speaker.item
                         :speaker="$speaker" class="w-full shrink-0 snap-start snap-always p-2 md:w-1/2 lg:w-1/4"
-                        />
-                    @endforeach
+                    />
+                @endforeach
             </x-slider>
         </div>
     </section>

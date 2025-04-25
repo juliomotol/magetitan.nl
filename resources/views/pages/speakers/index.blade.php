@@ -10,7 +10,7 @@ name('speakers.index');
     $speakers = Speaker::all();
 @endphp
 
-<x-layout.base>
+<x-layout.base title="Speakers">
     <x-hero-section class="bg-[url('/resources/images/speakers.jpg')] bg-top">
         <h1 class="text-heading-2-bold">
             List of Speakers

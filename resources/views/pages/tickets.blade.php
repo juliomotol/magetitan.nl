@@ -9,7 +9,7 @@ name('tickets.index');
     $featuredSponsors = App\Models\Sponsor::all()->whereNotNull('featured')->sortBy('featured');
 @endphp
 
-<x-layout.base>
+<x-layout.base title="Tickets">
     <x-hero-section class="bg-[url('/resources/images/ticket.jpg')]">
         <h1 class="text-heading-2-bold">
             Get The Ticket

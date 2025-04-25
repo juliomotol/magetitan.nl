@@ -18,7 +18,7 @@ name('sponsors.index');
     $organisationSponsors = $sponsors->where('level', 'organisation')->sortBy('sort');
 @endphp
 
-<x-layout.base>
+<x-layout.base title="Sponsors">
     <x-hero-section class="bg-[url('/resources/images/venue.jpg')]">
         <h1 class="text-heading-2-bold">
             Sponsors
